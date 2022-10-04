@@ -1,19 +1,27 @@
 import '../App.css';
 import Logo from '../assets/logo.png';
-import React from 'react';
+import Bars from '../assets/bars.png';
+import { Link } from 'react-scroll';
+import React, { useState } from 'react';
 
 function Header() {
+
+  const mobile = window.innerWidth<=768 ? true: false;
+  const [menuOpened, setMenuOpened] = useState(false);
+
   return (
     <div className="header">
-        <img src={Logo} className="logo"/>
+        <img src={Logo} className="logo" alt=""/>
 
-        <ul className="header-menu">
-            <li>Home</li>
-            <li>Programs</li>
-            <li>Why us</li>
-            <li>Plans</li>
-            <li>Testimonials</li>
-        </ul>
+        {(menuOpened === false && mobile === true) ? (<div style={{backgroundColor: 'var(--appColor)', padding: '0.5rem', borderRadius: '5px'}} onClick={() => setMenuOpened(true)}><img src={Bars} style={{width: '1.5rem', height: '1.5rem'}} alt=""/></div>) : (
+          <ul className="header-menu">
+            <li><Link onClick={() =>  setMenuOpened(false)} activeClass="active" to="header" spy={true} smooth={true}>Home</Link></li>
+            <li><Link onClick={() => setMenuOpened(false)} to="programs" spy={true} smooth={true}>Programs</Link></li>
+            <li><Link onClick={() => setMenuOpened(false)} to="reasons" spy={true} smooth={true}>Why us</Link></li>
+            <li><Link onClick={() => setMenuOpened(false)} to="plans" spy={true} smooth={true}>Plans</Link></li>
+            <li><Link onClick={() => setMenuOpened(false)} to="testimonials" spy={true} smooth={true}>Testimonials</Link></li>
+          </ul>
+        )}        
     </div>  
   )
 }

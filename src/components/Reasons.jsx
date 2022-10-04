@@ -23,24 +23,24 @@ function Reasons() {
 
             <div>
                 <span className="stroke-text">why</span>
-                <span>choose us?</span>
+                <span> choose us?</span>
             </div>
 
             <div className="details-r">
                 <div>
-                    <img src={tick}/>
+                    <img src={tick} alt=""/>
                     <span>OVER 140+ EXPERT COACHS</span>
                 </div>
                 <div>
-                    <img src={tick}/>
+                    <img src={tick} alt=""/>
                     <span>TRAIN SMARTER AND FASTER THAN BEFORE</span>
                 </div>
                 <div>
-                    <img src={tick}/>
+                    <img src={tick} alt=""/>
                     <span>1 FREE PROGRAM FOR NEW MEMBER</span>
                 </div>
                 <div>
-                    <img src={tick}/>
+                    <img src={tick} alt=""/>
                     <span>RELIABLE PARTNERS</span>
                 </div>
             </div>
@@ -48,9 +48,9 @@ function Reasons() {
             <span style={{color: "var(--gray", fontWeight: "normal",}}>OUR PARTNERS</span>
 
             <div className="partners">
-                <img src={nb}/>
-                <img src={adidas}/>
-                <img src={nike}/>
+                <img src={nb} alt=""/>
+                <img src={adidas} alt=""/>
+                <img src={nike} alt=""/>
             </div>
         </div>
     </div>
