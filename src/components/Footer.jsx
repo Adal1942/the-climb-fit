@@ -12,7 +12,7 @@ function Footer() {
         <div className="footer">
             <div className="social-links">
                 <a href='https://github.com/Adal1942'><img src={Github} alt=""/></a>
-                <img src={Instagram} alt=""/>
+                <a href='https://www.instagram.com/adal.1942/'><img src={Instagram} alt=""/></a>
                 <a href='https://www.linkedin.com/in/adauto-goncalves/'><img src={LinkedIn} alt=""/></a>
             </div> 
             <div className="logo-f">

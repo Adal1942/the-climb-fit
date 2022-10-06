@@ -15,14 +15,14 @@ function Testimonials() {
   return (
     <div className="testimonials">
         <div className="left-t">
-            <span>Testimonials</span>
-            <span className="stroke-text">What they</span>
-            <span>say about us</span>
+            <span>Depoimentos</span>
+            <span className="stroke-text">O que dizem</span>
+            <span>sobre nós</span>
             <motion.span key={selected} initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0}} exit={{ opacity: 0, x: 100}} transition={transition}>
                 {testimonialsData[selected].review}
             </motion.span>
             <span>
-                <span style={{color: 'var(--orange)'}}>
+                <span style={{color: 'var(--verde)'}}>
                     {testimonialsData[selected].name}
                 </span>{" "}
                 - {testimonialsData[selected].status}

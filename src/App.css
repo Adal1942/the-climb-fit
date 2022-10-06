@@ -9,8 +9,9 @@
   --orange: #f48915;
   --darkGrey: #464d53;
   --caloryCard: #656565;
-  --planCard: linear-gradient(210.41deg, #fa5042 1.14%, #ffa739 100.75%);
+  --planCard: linear-gradient(210.41deg, #81b71a 1.14%, #000 100.75%);
   --appColor: #3c3f45;
+  --verde: #81b71a;
 }
 
 .App{
@@ -35,7 +36,7 @@
 }
 
 .blur{
-  background: rgba(253, 120, 43, 0.69);
+  background: var(--verde);
   position: absolute;
   border-radius: 50%;
   filter: blur(150px);
@@ -86,9 +87,9 @@
 
 .the-best-ad .fluid{
   position: absolute;
-  background-color: var(--orange);
+  background-color: var(--verde);
   width: 5.4rem;
-  height: 80%;
+  height: 70%;
   left: 8px;
   border-radius: 3rem;
   z-index: 1;
@@ -97,7 +98,6 @@
 .hero-text{
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
   text-transform: uppercase;
   font-size: 4.5rem;
   font-weight: bold;
@@ -106,6 +106,7 @@
 }
 
 .hero-text div:nth-of-type(3){
+  margin-top: 1.5rem;
   font-size: 1rem;
   font-weight: 200;
   text-transform: none;
@@ -137,7 +138,7 @@
 
 .header-menu li:hover{
   cursor: pointer;
-  color: var(--orange);
+  color: var(--verde);
   transition: 0.4s;
 }
 
@@ -173,7 +174,7 @@
 
 .hero-buttons :nth-child(1){
   color: #fff;
-  background-color: var(--orange);
+  background-color: var(--verde);
   width: 8rem;
 }
 
@@ -181,7 +182,7 @@
   color: #fff;
   background-color: transparent;
   width: 8rem;
-  border: 2px solid var(--orange);
+  border: 2px solid var(--verde);
 }
 
 
@@ -206,7 +207,7 @@
 .right-h{
   flex: 1;
   position: relative;
-  background-color: var(--orange);
+  background-color: var(--verde);
 }
 
 .right-h .btn{
@@ -228,6 +229,52 @@
   position: absolute;
   right: 4rem;
   top: 7rem;
+}
+
+.heart{
+  height: 25px;
+  width: 25px;
+  background: #f20044;
+  position: relative;
+  transform: rotate(-45deg);
+  left: 1.5rem;
+  top: 0.4rem;
+  box-shadow: -1px 1px 10px #f20044;
+  animation: heart 0.6s linear infinite;
+}
+
+@keyframes heart{
+  0%{
+    transform: rotate(-45deg) scale(1.07);
+  }
+  80%{
+    transform: rotate(-45deg) scale(1.0);
+  }
+  100%{
+    transform: rotate(-45deg) scale(0.8);
+  }
+}
+
+.heart::before{
+  content: '';
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background: #f20044;
+  top: -50%;
+  border-radius: 50px;
+  box-shadow: -1px -1px 10px #f20044;
+}
+
+.heart::after{
+  content: '';
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background: #f20044;
+  right: -50%;
+  border-radius: 50px;
+  box-shadow: 1px -1px 10px #f20044;
 }
 
 .heart-rate :nth-child(2){
@@ -299,9 +346,9 @@
 
 .programs-header{
   display: flex;
-  gap: 5rem;
+  gap: 3rem;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2.5rem;
   justify-content: center;
   color: #fff;
   text-transform: uppercase;
@@ -412,7 +459,7 @@
 
 .right-r .some{
   font-weight: bold;
-  color: var(--orange);
+  color: var(--verde);
 }
 
 .right-r div{
@@ -450,10 +497,98 @@
 
 
 
+
+
+/* -- Images --*/
+
+.Photos{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.photos-header{
+  margin-top: -5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.bottom-i{
+  flex: 1;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.bottom-i>img{
+  position: absolute;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45rem;
+  height: 30rem;
+  object-fit: cover;
+  top: 1rem;
+}
+
+.bottom-i>:nth-child(1){
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45rem;
+  height: 30rem;
+  border: 2px solid var(--verde);
+  background-color: transparent;
+  top: -0.1rem;
+  margin-right: 1.5rem;
+}
+
+.bottom-i>:nth-child(2){
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45rem;
+  height: 30rem;
+  margin-left: 1.5rem;
+  top: 2rem;
+  background: var(--planCard);
+}
+
+.arrows-i{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 32rem;
+}
+
+.arrows-i>img{
+  width: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
 /* -- Plans --*/
 
 .plans-container{
-  margin-top: -4rem;
+  margin-top: -2rem;
   padding: 0 2rem;
   display: flex;
   flex-direction: column;
@@ -498,7 +633,7 @@
 }
 
 .plan svg{
-  fill: var(--orange);
+  fill: var(--verde);
   width: 2rem;
   height: 2rem;
 }
@@ -538,7 +673,7 @@
 }
 
 .plans :nth-child(2) button{
-  color: var(--orange);
+  color: var(--verde);
 }
 
 
@@ -562,7 +697,7 @@
 }
 
 .left-t :nth-child(1){
-  color: var(--orange);
+  color: var(--verde);
   font-weight: bold;
 }
 
@@ -596,7 +731,7 @@
   position: absolute;
   width: 17rem;
   height: 20rem;
-  border: 2px solid var(--orange);
+  border: 2px solid var(--verde);
   background-color: transparent;
   right: 9rem;
   top: 0.9rem;
@@ -646,7 +781,7 @@
 .left-j hr{
   position: absolute;
   width: 10.5rem;
-  border: 2px solid var(--orange);
+  border: 2px solid var(--verde);
   border-radius: 20%;
   margin: -10px 0;
 }
@@ -682,7 +817,7 @@
 }
 
 .btn-j{
-  background-color: var(--orange);
+  background-color: var(--verde);
   color: #fff;
 }
 
@@ -730,7 +865,7 @@
   width: 26rem;
   height: 12rem;
   filter: blur(200px);
-  background: red;
+  background: var(--verde);
 }
 
 .footer-blur-2{
@@ -739,7 +874,7 @@
   width: 26rem;
   height: 12rem;
   filter: blur(200px);
-  background: rgb(255, 115, 0);
+  background: var(--verde);
 }
 
 
@@ -842,6 +977,53 @@
     flex-direction: column;
     background-color: var(--appColor);
     padding: 2rem;
+  }
+
+  /* -- Imagens --*/
+
+  .Photos{
+    flex-direction: column;
+  }
+
+  .photos-header{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.2rem;
+    gap: 1rem;
+  }
+
+  .bottom-i{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .bottom-i>img{
+    width: 20rem;
+    height: 15rem;
+    position: relative;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .bottom-i>:nth-child(1){
+    width: 20rem;
+    height: 15rem;
+    border: 2px solid var(--verde);
+    background-color: transparent;
+    top: -0.1rem;
+    margin-right: 1.5rem;
+  }
+  
+  .bottom-i>:nth-child(2){
+    width: 20rem;
+    height: 15rem;
+  }
+
+  .arrows-i{
+    margin-top: 3rem;
   }
 
   /* -- Programs -- */
