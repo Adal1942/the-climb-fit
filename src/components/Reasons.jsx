@@ -24,7 +24,7 @@ function Reasons() {
 
             <div>
                 <span className="stroke-text">para</span>
-                <span> nos escolher?</span>
+                <span> nos escolher</span>
             </div>
 
             <div className="details-r">
@@ -38,7 +38,7 @@ function Reasons() {
                 </div>
                 <div>
                     <img src={tick} alt=""/>
-                    <span>3 PROGRAMA GRATUITO PARA NOVOS MEMBROS</span>
+                    <span>1 PROGRAMA GRATUITO PARA NOVOS MEMBROS</span>
                 </div>
                 <div>
                     <img src={tick} alt=""/>

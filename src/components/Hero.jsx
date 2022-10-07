@@ -6,11 +6,13 @@ import hero_image_back from '../assets/hero_image_back.png';
 import Calories from '../assets/calories.png';
 import { motion } from "framer-motion";
 import NumberCounter from 'number-counter';
+import { Link } from 'react-router-dom';
+
 
 const Hero = () => {
 
   const transition = {type: 'spring', duration : 3};
-  const mobile = window.innerWidth<=768 ? true: false;    
+  const mobile = window.innerWidth<=768 ? true: false;  
 
   return (
     <div className="hero" id='home'>
@@ -57,14 +59,14 @@ const Hero = () => {
           </div>
 
           <div className="hero-buttons">
-            <button className="btn">Se Inscrever</button>
-            <button className="btn">Saber Mais</button>
+            <Link to="/work"><button className="btn">Se Inscrever</button></Link>
+            <Link to="/work"><button className="btn">Saber Mais</button></Link>
           </div>
 
         </div>
         
         <div className="right-h">
-          <button className="btn">Se Inscrever</button>
+          <Link to="/work"><button className="btn">Se Inscrever</button></Link>
 
           <motion.div initial={{ right: "-1rem" }} whileInView={{ right: "4rem" }} transition={transition} className="heart-rate">
             <div className='heart'></div>

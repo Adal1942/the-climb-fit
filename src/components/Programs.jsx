@@ -2,6 +2,7 @@ import '../App.css';
 import React from 'react'
 import {programsData} from '../data/programsData';
 import RightArrow from '../assets/rightArrow.png';
+import { Link } from 'react-router-dom';
 
 function Programs() {
   return (
@@ -19,7 +20,7 @@ function Programs() {
                     <span>{program.heading}</span>
                     <span>{program.details}</span>
                     <div className="join-now">
-                        <span>SABER MAIS</span>
+                        <Link to='/work' className='p-span'><span>SABER MAIS</span></Link>
                         <img src={RightArrow} alt=""/>
                     </div>
                 </div>

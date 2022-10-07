@@ -20,8 +20,8 @@ function Images() {
             <span className="stroke-text"> espaço</span>
         </div>
         <div className="bottom-i">
-            <motion.div initial={{ opacity: 0, x: -50 }} transition={{ ...transition, duration: 1 }} whileInView={{ opacity: 1, x: 0}}></motion.div>
-            <motion.div initial={{ opacity: 0, x: 50 }} transition={{ ...transition, duration: 1 }} whileInView={{ opacity: 1, x: 0}}></motion.div>
+            <motion.div initial={{ opacity: 0, x: -100 }} transition={{ ...transition, duration: 1 }} whileInView={{ opacity: 1, x: 0}}></motion.div>
+            <motion.div initial={{ opacity: 0, x: 100 }} transition={{ ...transition, duration: 1 }} whileInView={{ opacity: 1, x: 0}}></motion.div>
             <motion.img src={photosData[selected].image} key={selected} initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -100 }} transition={transition}/>
         </div>
         <div className="arrows-i">
